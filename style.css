@@ -26,6 +26,7 @@ html {
 
 p {
   color:#0e6453;
+  
 }
 
 /* TRANSITION */
@@ -226,7 +227,7 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
-  color: #0e6453;
+  color: var(--green);
 }
 
 /* BUTTONS */
@@ -238,16 +239,26 @@ section {
 }
 
 .btn {
-  font-weight: 600;
+  font-weight: 200;
   transition: all 300ms ease;
-  padding: 1rem;
+  padding: .5rem;
   width: 8rem;
   border-radius: 2rem;
+  margin-top: .5rem;
+  text-align: center;
+  padding-left: 1rem;
+  border: var(--green);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 1rem;
+  background: #fff;
 }
 
 .btn-color-1,
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  border: var(--green) solid;
 }
 
 .btn-color-1:hover,
@@ -292,6 +303,7 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .about-containers,
@@ -335,7 +347,7 @@ section {
 #experience {
   position: relative;
   text-justify: auto;
-  margin-top: 25vh;
+  margin-top: 70vh;
 
 }
 
@@ -370,37 +382,40 @@ article {
 
 article .icon {
   cursor: default;
+  color:var(--green);
 }
 
 /* PROJECTS SECTION */
 
 #projects {
-  position: relative;
+   position: relative; 
   padding: 0%;
+ 
 
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
+  border-color:  var(--green);
   background: rgb(250, 250, 250);
-  box-shadow: #0e6453;
+  box-shadow: var(--box-shadow);
+  
 }
 
 .project-img {
-  border-radius: var(--green);
   width: 50%;
   height: 50%;
+  border-radius: 1rem;
 }
 
 .project-title {
   margin: 1rem;
   color: black;
 }
-
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-}
+/* .experience-details-container{
+  width: 60%;
+  height: 70%;
+  text-align: center;
+} */
 
 /* CONTACT */
 
@@ -436,10 +451,12 @@ article .icon {
 
 .contact-icon {
   cursor: default;
+  color: var(--green);
 }
 
 .email-icon {
   height: 2.5rem;
+  color: var(--green);
 }
 
 /* FOOTER SECTION */
@@ -458,4 +475,38 @@ footer p {
 }
 #span{
   color: #444;
+}
+
+/* .btn {
+  display: inline-block;
+  margin-top: .5rem;
+  margin-left: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--green);
+  cursor: pointer;
+  font-size: 1rem;
+  background: #fff;
+} */
+
+.btn span {
+  padding: .7rem 1rem;
+  border-radius: .5rem;
+  background: var(--green);
+  color: #fff;
+  margin-left: .5rem;
+}
+
+.btn:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn:hover span {
+  color: var(--green);
+  background: #fff;
+  margin-left: 1rem;
 }

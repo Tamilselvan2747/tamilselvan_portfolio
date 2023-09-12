@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Tk portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
 </head>
@@ -47,7 +47,7 @@
       <h1 class="title">Tamilselvan Kothandan</h1>
       <p class="section__text__p2">full-stack developer</p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/')">
+        <button class="btn btn-color-2" id="downloadCVButton">
           Download CV
         </button>
         <button class="btn btn-color-2" onclick="location.href='./#contact'">
@@ -79,17 +79,18 @@
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
             <h3>Education</h3>
-            <p>B.Com(cs). Bachelors Degree</p>
+            <p>12th Graduate</p>
           </div>
         </div>
         <div class="text-container">
           <p>
             Hi, I am Tamilselvan Kothandan, from Chennai. My father works as a tea master, and my mother is a homemaker.
-            I completed my B.Com. (CS) in 2021 from the Government Arts and Science College, Chennai. Post my degree, I
-            joined Freshworks as a tea master. One day I saw a poster about FSSA applications. I immediately applied for
-            it and fortunately got selected. I am learning lot of computer skills and coding languages at the academy. I
-            aim to become a full-stack developer. Apart from academics, I am a District-level carrom board player and a
-            kabbadi player. I am a self-learn and a good team player. With the money I earn, I want to rebuild my home.
+            I completed my 12th Graduate in 2019.Then, I joined Freshworks as a tea master. One day I saw a poster about
+            FSSA applications. I immediately applied for it and fortunately got selected. I am learning a lot of
+            computer skills and coding languages at the academy. I aim to become a full-stack developer. Apart from
+            academics, I am a District-level carrom board player and a kabbadi player. I am self-learning and a good
+            team player. With the money I earn, I want to rebuild my home.
+
 
           </p>
         </div>
@@ -128,7 +129,7 @@
               </div>
             </article>
 
-            
+
           </div>
         </div>
 
@@ -208,6 +209,24 @@
     <p>Copyright &#169; 2023 Tamilselvan Kothandan. All Rights Reserved.</p>
   </footer>
   <script src="script.js"></script>
+  <script>
+    // Get a reference to the Download CV button
+    const downloadCVButton = document.getElementById('downloadCVButton');
+
+    // Add a click event listener to the button
+    downloadCVButton.addEventListener('click', () => {
+      // Define the URL of the CV PDF
+      const cvUrl = './assets/Tamilselvan_kothandan_CV resume.pdf';
+
+      // Create a hidden anchor element to trigger the download
+      const downloadLink = document.createElement('a');
+      downloadLink.href = cvUrl;
+      downloadLink.download = 'Tamilselvan_kothandan_CV resume.pdf';
+
+      // Simulate a click on the anchor element to trigger the download
+      downloadLink.click();
+    });
+  </script>
 </body>
 
 </html>
